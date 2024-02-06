@@ -9,9 +9,11 @@ import { MainComponent } from './pages/main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './auth/interceptor/auth.interceptor';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
-  declarations: [AppComponent, SignupComponent, SigninComponent, MainComponent],
+  declarations: [AppComponent, SignupComponent, SigninComponent, MainComponent, SidebarComponent, ChatComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

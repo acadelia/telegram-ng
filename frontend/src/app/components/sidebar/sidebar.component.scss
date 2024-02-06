@@ -1,0 +1,36 @@
+.sidebar {
+  border-right: 1px solid #dcdcdc;
+  width: 30%;
+  height: 100vh;
+}
+
+.sidebar-input {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 0;
+}
+
+input {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  border-radius: 500px;
+}
+
+.sidebar-body {
+  height: 84%;
+}
+
+img {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+}
+
+.sidebar-footer {
+  padding: 10px 0;
+  border-top: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-evenly;
+}

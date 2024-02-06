@@ -5,7 +5,6 @@ import { TokenService } from 'src/app/auth/token/token.service';
 
 const signInApi = 'http://localhost:3000/user/login';
 const signUpApi = 'http://localhost:3000/user/create';
-const users = 'http://localhost:3000/user';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +15,7 @@ export class AuthService {
   signUpAndLogin(
     username: string,
     email: string,
-    password: string,
+    password: string
   ): Observable<any> {
     const signUpBody = {
       email: email,
@@ -38,9 +37,9 @@ export class AuthService {
               if (token) {
                 this.tokenService.saveToken(token);
               }
-            }),
+            })
           );
-      }),
+      })
     );
   }
 
@@ -56,17 +55,8 @@ export class AuthService {
         if (token) {
           this.tokenService.saveToken(token);
         }
-      }),
+      })
     );
-  }
-
-  users(): Observable<any> {
-    return this.http.get(users);
-  }
-
-  userMe(): Observable<any> {
-    const token = this.tokenService.getToken();
-    return this.http.get(`http://localhost:3000/user/me/${token}`);
   }
 
   signout() {
